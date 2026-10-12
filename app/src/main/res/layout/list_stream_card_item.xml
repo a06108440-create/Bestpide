@@ -11,7 +11,7 @@
     android:clickable="true"
     android:focusable="true">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/itemThumbnailView"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -23,7 +23,8 @@
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ThumbnailShape" />
 
     <org.schabi.newpipe.views.NewPipeTextView
         android:id="@+id/itemDurationView"
@@ -39,52 +40,72 @@
         android:textColor="@color/duration_text_color"
         android:textSize="@dimen/video_item_search_duration_text_size"
         app:layout_constraintBottom_toBottomOf="@id/itemThumbnailView"
-        app:layout_constraintRight_toRightOf="@id/itemThumbnailView"
+        app:layout_constraintEnd_toEndOf="@id/itemThumbnailView"
         tools:text="1:09:10" />
 
     <org.schabi.newpipe.views.NewPipeTextView
         android:id="@+id/itemVideoTitleView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_small"
-        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginStart="@dimen/video_item_title_margin_start"
+        android:layout_marginEnd="@dimen/video_item_title_margin_end"
+        android:layout_marginTop="@dimen/video_item_metadata_top_margin"
         android:ellipsize="end"
         android:maxLines="2"
-        android:layout_marginTop="@dimen/margin_small"
         android:textAppearance="?textAppearanceListItem"
+        android:textColor="@color/yt_text_primary"
+        android:textSize="@dimen/video_item_search_title_text_size"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/itemThumbnailView"
         app:layout_constraintStart_toStartOf="@id/itemThumbnailView"
         app:layout_constraintTop_toBottomOf="@id/itemThumbnailView"
         tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tristique vitae sem vitae blanditLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum" />
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/itemAvatarView"
+        android:layout_width="@dimen/video_item_search_avatar_size"
+        android:layout_height="@dimen/video_item_search_avatar_size"
+        android:layout_marginStart="@dimen/video_item_avatar_margin_start"
+        android:layout_marginTop="@dimen/video_item_avatar_margin_top"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_avatar"
+        app:layout_constraintStart_toStartOf="@id/itemVideoTitleView"
+        app:layout_constraintTop_toBottomOf="@id/itemVideoTitleView"
+        app:shapeAppearanceOverlay="@style/CircularImageView" />
+
     <org.schabi.newpipe.views.NewPipeTextView
         android:id="@+id/itemUploaderView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_micro"
+        android:layout_marginStart="@dimen/video_item_metadata_spacing"
         android:layout_marginEnd="@dimen/margin_small"
         android:ellipsize="end"
         android:lines="1"
         android:includeFontPadding="false"
         android:textAppearance="?android:textAppearanceSmall"
-        app:layout_constraintEnd_toStartOf="@id/itemAdditionalDetails"
-        app:layout_constraintStart_toStartOf="@id/itemVideoTitleView"
-        app:layout_constraintTop_toBottomOf="@+id/itemVideoTitleView"
+        android:textColor="@color/yt_text_secondary"
+        android:textSize="@dimen/video_item_search_uploader_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/itemAvatarView"
+        app:layout_constraintStart_toEndOf="@id/itemAvatarView"
+        app:layout_constraintTop_toTopOf="@id/itemAvatarView"
         tools:text="Uploader" />
 
     <org.schabi.newpipe.views.NewPipeTextView
         android:id="@+id/itemAdditionalDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/video_item_metadata_bottom_margin"
         android:ellipsize="end"
         android:lines="1"
         android:includeFontPadding="false"
         android:textAppearance="?android:textAppearanceSmall"
-        app:layout_constraintBottom_toBottomOf="@id/itemUploaderView"
-        app:layout_constraintEnd_toEndOf="@+id/itemVideoTitleView"
+        android:textColor="@color/yt_text_secondary"
+        android:textSize="@dimen/video_item_search_upload_date_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/itemVideoTitleView"
         app:layout_constraintStart_toEndOf="@id/itemUploaderView"
         app:layout_constraintTop_toTopOf="@id/itemUploaderView"
-        tools:text="2 years ago • 10M views" />
+        tools:text="2 years ago \u2022 10M views" />
 
     <org.schabi.newpipe.views.AnimatedProgressBar
         android:id="@+id/itemProgressView"

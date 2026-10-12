@@ -9,7 +9,19 @@
     <color name="placeholder_background">#999999</color>
     <color name="placeholder_foreground">#6C6C6C</color>
 
-    <!-- Light Theme -->
+    <!-- YouTube Dark Theme Palette (2024/2025) -->
+    <color name="yt_background_primary">#0F0F0F</color>
+    <color name="yt_background_secondary">#272727</color>
+    <color name="yt_brand_red">#FF0000</color>
+    <color name="yt_text_primary">#F1F1F1</color>
+    <color name="yt_text_secondary">#AAAAAA</color>
+    <color name="yt_divider">#3F3F3F</color>
+    <color name="yt_icon_active">#F1F1F1</color>
+    <color name="yt_icon_inactive">#AAAAAA</color>
+    <color name="yt_ripple">#1FFFFFFF</color>
+    <color name="yt_scrim_gradient">#66000000</color>
+
+    <!-- Legacy Light Theme (kept for compatibility) -->
     <color name="light_background_color">#EEEEEE</color>
     <color name="light_dialog_background_color">#EEEEEE</color>
     <color name="light_settings_accent_color">#e53935</color>
@@ -24,7 +36,7 @@
     <color name="light_card_item_contrast_color">#E9E9E9</color>
     <color name="light_border_color">#33000000</color>
 
-    <!-- Dark Theme -->
+    <!-- Legacy Dark Theme -->
     <color name="dark_background_color">#222222</color>
     <color name="dark_dialog_background_color">#424242</color>
     <color name="dark_settings_accent_color">#ff5252</color>
@@ -40,7 +52,7 @@
     <color name="dark_card_item_contrast_color">#474747</color>
     <color name="dark_border_color">#33FFFFFF</color>
 
-    <!-- Black Theme -->
+    <!-- Legacy Black Theme -->
     <color name="black_background_color">#000000</color>
     <color name="black_settings_accent_color">@color/dark_settings_accent_color</color>
     <color name="black_separator_color">#1effffff</color>
@@ -52,7 +64,7 @@
     <!-- Miscellaneous -->
     <color name="queue_background_color">@color/dark_queue_background_color</color>
     <color name="drawer_header_font_color">#F2FFFFFF</color>
-    <color name="duration_background_color">#aa000000</color>
+    <color name="duration_background_color">#CC000000</color>
     <color name="live_duration_background_color">#c8E53935</color>
     <color name="playlist_stream_count_background_color">#e6000000</color>
     <color name="duration_text_color">#EEFFFFFF</color>

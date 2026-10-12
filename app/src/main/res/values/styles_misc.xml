@@ -107,4 +107,9 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="ThumbnailShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/video_item_thumbnail_corner_radius</item>
+    </style>
+
 </resources>
